@@ -10,8 +10,9 @@
 
     {{ Html::style('css/styles.css') }}
     {{ Html::style('css/font-awesome.min.css') }}
-    {{ Html::style('css/hover.min.css') }}
+    {{ Html::style('css/hover-min.css') }}
     {{ Html::style('css/demo.page.css') }}
+   
 
 
 

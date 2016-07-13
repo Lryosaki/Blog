@@ -1,5 +1,5 @@
    <!-- Default Bootstrap Navbar -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-light bg-faded">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -9,18 +9,26 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Bloginy</a>
+          <a class="navbar-brand" href="/"><img class="image img-rounded""  src="{{url('css/images/bloginy.png')}}"></a>
+          
         </div>
-
+        <div class="menu-top-spacing">
+        <form method="post" action"TagController.php" class="navbar-form navbar-left " role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+        </form>
+        </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav hov">
-            <li class="{{ Request::is('/') ? "active" : "" }}"><a  href="/">Home</a></li>
+          <ul class="nav navbar-nav menu-top-spacing ">
+            <li class="{{ Request::is('/') ? "active" : "" }}"><a  href="/">Acceuil</a></li>
             <li class="{{ Request::is('blog') ? "active" : "" }}"><a  href="/blog">Blog</a></li>
 
-            <li class="{{ Request::is('about') ? "active" : "" }}"><a href="/about">About</a></li>
-            <li class="{{ Request::is('contact') ? "active" : "" }}"><a href="/contact">Contact</a></li>
+            <li class="{{ Request::is('about') ? "active" : "" }}"><a href="/about">À propos</a></li>
+            <li class="{{ Request::is('contact') ? "active" : "" }}"><a href="/contact">Nous Contacter</a></li>
           </ul>
+
 
           <ul class="nav navbar-nav navbar-right">
             @if(Auth::check())
@@ -32,19 +40,20 @@
                 <li><a href="{{route('categories.index')}}">Categories</a></li>
                 <li><a href="{{route('tags.index')}}">Tags</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="{{ route('logout')}}">Logout</a></li>
+                <li><a href="{{ route('logout')}}">Déconnexion</a></li>
 
               </ul>
             </li>
 
             @else
 
-            <a href="{{ route('login') }}" class="btn btn-default btn-top-spacing hvr-grow ">Login</a>
-            <a href="{{ route('register') }}" class="btn btn-default btn-top-spacing hvr-grow ">Register</a>
+            <a href="{{ route('login') }}" class="btn btn-default btn-top-spacing hvr-grow " style="margin-right:5px;">Connexion</a>
+            <a href="{{ route('register') }}" class="btn btn-default btn-top-spacing hvr-grow ">S'inscrire</a>
 
 
             @endif
           </ul>
+
         </div>
         <!-- /.navbar-collapse -->
       </div>
