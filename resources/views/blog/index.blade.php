@@ -1,4 +1,4 @@
-@extends('main')
+	@extends('main')
 @section('title','| Blog')
 @section('content')
 
@@ -22,7 +22,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="text-center">
-				{!! $posts->links()!!}
+				{!! $posts->links()!!}	
 			</div>
 		</div>
 	</div>

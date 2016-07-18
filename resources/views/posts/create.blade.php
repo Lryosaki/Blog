@@ -1,4 +1,4 @@
-@extends('main')
+@extends('main3')
 @section('title','|Create New Posts')
  @section('stylesheets')
 
@@ -37,7 +37,7 @@
 
     		{{Form::label('body','Post body:',array('class'=>'form-spacing-top'))}}
     		{{Form::textarea('body',null,array('class' => 'form-control ','required' => ''))}}
-    		{{Form::submit('Create Post',array('class' => 'btn btn-success btn-lg  hvr-grow','style' => 'margin-top :20px'))}}
+    		{{Form::submit('Create Post',array('class' => 'btn btn-success btn-lg  hvr-grow','style' => 'margin-top :10px; margin-bottom:10px;'))}}
 		{!! Form::close() !!}
 	</div>
 </div>

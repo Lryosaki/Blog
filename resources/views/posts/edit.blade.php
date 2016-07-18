@@ -1,4 +1,4 @@
-@extends('main')
+@extends('main3')
 
 @section('title','| Edit Blog Post')
 @section('stylesheets')
@@ -9,6 +9,7 @@
 @section('content')
 
 <div class="row">
+<div class="col-sm-10 col-sm-offset-2"> 
 {!! Form::model($post,['route' => ['posts.update',$post->id],'method'=>'PUT']) !!}
 	<div class="col-md-8">
 	{{ Form::label('title' ,'Title :')}}
@@ -27,12 +28,12 @@
 	{{ Form::label('body','Body :',['class'=>'btn-h1-spacing'])}}
 	{{ Form::textarea('body',null,["class" =>'form-control'])}}
 
-	
-	
 	</div>
-
-	<div class="col-md-4">
-		<div class="well">
+	
+</div>
+		<div class="row">
+		<div class="col-sm-4 col-sm-offset-2" style="margin-left:350px; margin-top:20px;">		
+			<div class="well">
 		 	<dl class="dl-horizontal">
 		 		<dt>Create At :</dt>
 		 		<dd>{{ date('M j, Y H:i',strtotime($post->created_at))}}</dd>
@@ -50,6 +51,7 @@
 			 	{{ Form::submit('Save Changes',['class'=>'btn btn-success btn-block hvr-grow']) }}		 	
 				</div>
 			 </div>
+		</div>
 		</div>
 	</div>
 {!! Form::close() !!}

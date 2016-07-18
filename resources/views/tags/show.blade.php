@@ -1,14 +1,21 @@
-@extends('main')
+@extends('main3')
 
 @section('title',"| $tag->name ")
 
 @section('content')
 <div class="row">
-	<div class="col-md-8">
+	<div class="col-md-6 col-md-offset-2 ">
 		<h1>{{ $tag->name }} Tag <small>{{ $tag->posts()->count() }} Posts</small></h1>
 	</div>
-	<div class="col-md-2 col-md-offset-2">
+	<div class="col-md-2 	">
 		<a href="{{ route('tags.edit', $tag->id)}}" class="btn btn-primary btn-block pull-right btn-h2-spacing hvr-grow">Edit</a>
+
+		{{ Form::open(['route' => ['tags.destroy', $tag->id], 'method' => 'DELETE']) }}
+				{{ Form::submit('Delete', ['class' => 'btn btn-danger btn-block btn-h1-spacing  hvr-grow']) }}
+		{{ Form::close() }}
+
+		
+
 	{{ Html::linkRoute('tags.index','<< See all tags',[],['class'=>'btn btn-default btn-block btn-h1-spacing hvr-grow'])}}
 	</div>
 	
@@ -16,7 +23,7 @@
 					
 </div>
 <div class="row">
-	<div class="col-md-12">
+	<div class="col-md-6 col-md-offset-2 ">
 		<table class="table table-striped">
 			<thead>
 				<tr>

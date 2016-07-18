@@ -13,6 +13,7 @@
 		<hr>
 		<div class="tags">
 		@foreach($post->tags as $tag)
+		
 			<spam class="label label-default">{{ $tag->name }}</spam>
 		
 		@endforeach

@@ -1,9 +1,9 @@
-@extends('main')
+@extends('main3')
 @section('title','| All Categories')
 @section('content')
 
 <div class="row">
-	<div class="col-md-8">
+	<div class="col-md-6 col-md-offset-2  ">
 		<h1> Categories</h1>
 		<table class="table">
 			<thead>

@@ -1,2 +1,2 @@
 Click here to reset your password :
-<a href="{{$link=url('password/reset',$token).'?email='.urlencode($user->getEmailForPasswordReset())}}"><{{ url('password/reset',$token).'?email='.urlencode($user->getEmailForPasswordReset()) }}/a>
+<a href="{{$link=url('password/reset',$token).'?email='.urlencode($user->getEmailForPasswordReset())}}">{{ url('password/reset',$token).'?email='.urlencode($user->getEmailForPasswordReset()) }}</a>

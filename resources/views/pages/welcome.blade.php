@@ -1,7 +1,11 @@
 @extends('main')
 
 @section('title','| Homepage')
+@section('scripts')  
 
+  {{ Html::style('css/social.css') }}
+  
+@endsection
 @section('content')
          <!-- <a style="display:scroll;position:fixed; bottom:5px; left:5px; size:15px; "  href="#" title="Retour haut de page"><img src="css/images/top.png"/></a> -->
 
@@ -47,13 +51,7 @@
 
             @endforeach
             <hr>
-            <h2>Follow us</h2>
-              <div class="fb-icon-bg"></div>
-                <div class="fb-bg"></div>
-              <div class="twi-icon-bg"></div>
-                <div class="twi-bg"></div>
-              <div class="g-icon-bg"></div>
-                <div class="g-bg"></div>
+           
                       
         </div>
       </div>

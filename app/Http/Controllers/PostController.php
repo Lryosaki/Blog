@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Post;
 use App\Tag;
@@ -168,8 +167,11 @@ class PostController extends Controller
     {
         //
          $post= Post::find($id);
+         $post->tags()->detach();
+         
          $post->delete();
-        Session::flash('success','The blog post was successfully deleted!');
+        
+         Session::flash('success','The blog post was successfully deleted!');
 
          return redirect()->route('posts.index');
 

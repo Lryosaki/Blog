@@ -3,7 +3,7 @@
   <head>
 @include('partials._head')
   </head>
-  <body class="">
+  <body class="body">
   @include('partials._nav')
     <div class="container">
       @include('partials._messages')
