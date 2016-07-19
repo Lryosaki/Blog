@@ -2,7 +2,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Blog Default | Triangle</title>
+    <title>Blog | </title>
   
     {{ Html::style('css/bootstrap.min.css') }}
     {{ Html::style('css/font-awesome.min.css') }}

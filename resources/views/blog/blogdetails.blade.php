@@ -30,7 +30,7 @@
                                 <div class="post-thumb">
                                     <a href="#"><img src="{{url('images/post.jpg')}}" class="img-responsive" alt=""></a>
                                     <div class="post-overlay">
-                                    <span class="uppercase"><a href="#"> <small>{{ date('M j',strtotime($post->created_at)) }}</small></a></span>                                     </div>
+                                    <span class="uppercase"><a href="#"> <small>{{ date('M j',strtotime($post->created_at))}}</small></a></span>                                     </div>
                                 </div>
                                 <div class="post-content overflow">
 
@@ -61,7 +61,7 @@
                                     <div class="author-profile padding">
                                         <div class="row">
                                             <div class="col-sm-2">
-                                                <img src="{{url('images/blogdetails/1.png')}}" alt="">
+                                                <img src="{{url('images/user.jpg')}}" alt="">
                                             </div>
                                             <div class="col-sm-10">
                                                 <h3>Rodrix Hasel</h3>
@@ -76,7 +76,7 @@
                                         <li class="media">
                                             <div class="post-comment">
                                                 <a class="pull-left" href="#">
-                                                    <img class="media-object" src="{{url('images/blogdetails/2.png')}}" alt="">
+                                                    <img class="media-object" src="{{url('images/user.jpg')}}" alt="">
                                                 </a>
                                                 <div class="media-body">
                                                     <span><i class="fa fa-user"></i>Posted by <a href="#">Endure</a></span>
@@ -91,7 +91,7 @@
                                                 <ul class="media-list">
                                                     <li class="post-comment reply">
                                                         <a class="pull-left" href="#">
-                                                            <img class="media-object" src="{{url('images/blogdetails/3.png')}}" alt="">
+                                                            <img class="media-object" src="{{url('images/user.jpg')}}" alt="">
                                                         </a>
                                                         <div class="media-body">
                                                             <span><i class="fa fa-user"></i>Posted by <a href="#">Endure</a></span>
@@ -107,7 +107,7 @@
                                         <li class="media">
                                             <div class="post-comment">
                                                 <a class="pull-left" href="#">
-                                                    <img class="media-object" src="{{url('images/blogdetails/4.png')}}" alt="">
+                                                    <img class="media-object" src="{{url('images/user.jpg')}}" alt="">
                                                 </a>
                                                 <div class="media-body">
                                                     <span><i class="fa fa-user"></i>Posted by <a href="#">Endure</a></span>

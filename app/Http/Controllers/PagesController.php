@@ -55,7 +55,7 @@ class PagesController extends Controller{
 			$message->subject($data['subject']);
 		});
 
-		Session::flash('success','The email was successfully saved!');
+		Session::flash('success','The email was successfully sent!');
 
  		 return redirect('/');
 	}
