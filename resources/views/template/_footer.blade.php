@@ -6,23 +6,23 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="testimonial bottom">
-                        <h2>Testimonial</h2>
+                        <h2>Citations</h2>
                         <div class="media">
                             <div class="pull-left">
-                                <a href="#"><img src="{{url('images/home/profile1.png')}}" alt=""></a>
+                                <a href="#"><img src="{{url('images/Confucius.jpg')}}" alt=""></a>
                             </div>
                             <div class="media-body">
-                                <blockquote>Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore tail.</blockquote>
-                                <h3><a href="#">- Jhon Kalis</a></h3>
+                                <blockquote>Exige beaucoup de toi-même et attends peu des autres. Ainsi beaucoup d'ennuis te seront épargnés.</blockquote>
+                                <h3><a href="#">- Confucius</a></h3>
                             </div>
                          </div>
                         <div class="media">
                             <div class="pull-left">
-                                <a href="#"><img src="{{url('images/home/profile2.png')}}" alt=""></a>
+                                <a href="#"><img src="{{url('images/Albert Einstein.jpg')}}" alt=""></a>
                             </div>
                             <div class="media-body">
-                                <blockquote>Capicola nisi flank sed minim sunt aliqua rump pancetta leberkas venison eiusmod.</blockquote>
-                                <h3><a href="">- Abraham Josef</a></h3>
+                                <blockquote>Le monde est dangereux à vivre ! Non pas tant à cause de ceux qui font le mal, mais à cause de ceux qui regardent et laissent faire.</blockquote>
+                                <h3><a href="">- Albert Einstein</a></h3>
                             </div>
                         </div>   
                     </div> 

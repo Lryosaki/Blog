@@ -60,7 +60,7 @@
                                     </div>
                                     <div class="author-profile padding">
                                         <div class="row">
-                                            <div class="col-sm-2">
+                                            <div class="col-sm-2 gallery"">
                                                 <img src="{{url('images/user.jpg')}}" alt="">
                                             </div>
                                             <div class="col-sm-10">

@@ -22,7 +22,8 @@
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
     {{ Html::style('css/hover-min.css') }}
     {{ Html::style('css/demo.page.css') }}
-        {{ Html::style('css/styles.css') }}
-        <script type="text/javascript">var switchTo5x=true;</script>
+    {{ Html::style('css/styles.css') }}
+    <script type="text/javascript">var switchTo5x=true;</script>
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript">stLight.options({publisher: "7e8eb33b-fbe0-4915-9b93-09490e3d10df", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+    

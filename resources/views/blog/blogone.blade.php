@@ -36,9 +36,9 @@
                                 </div>
                                 <div class="post-content overflow">
                                     <h2 class="post-title bold"><a href="blogdetails.html">{{ $post->title }}</a></h2>
-                                    <h3 class="post-author"><a href="#">Posted by micron News</a></h3>
+                                    <h3 class="post-author"><a href="#">Posted by {{$post->created_by}}</a></h3>
                                        
-                                     <p> {{ substr($post->body,0,250) }} {{ strlen($post->body) > 250 ? "...": ""}}</p>
+                                     <p> {{ substr($post->body,0,200) }} {{ strlen($post->body) > 200 ? "...": ""}}</p>
 
                                     <a href="{{ url('blog/'.$post->slug)}}" >Read More</a>
                                     <div class="post-bottom overflow">

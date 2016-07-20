@@ -12,21 +12,21 @@
 <div class="col-sm-10 col-sm-offset-2"> 
 {!! Form::model($post,['route' => ['posts.update',$post->id],'method'=>'PUT']) !!}
 	<div class="col-md-8">
-	{{ Form::label('title' ,'Title :')}}
-	{{ Form::text('title',null,["class" =>'form-control input-lg'])}}
+		{{ Form::label('title' ,'Title :')}}
+		{{ Form::text('title',null,["class" =>'form-control input-lg'])}}
 
-	{{ Form::label('slug','Slug',['class'=>'btn-h1-spacing']) }}
-	{{ Form::text('slug',null,['class'=>'form-control']) }}
+		{{ Form::label('slug','Slug',['class'=>'btn-h1-spacing']) }}
+		{{ Form::text('slug',null,['class'=>'form-control']) }}
 
-	{{ Form::label('category_id' ,'Category id :',['class'=>'btn-h1-spacing'])}}
-	{{ Form::select('category_id',$categories,null,['class'=>'form-control'])}}
+		{{ Form::label('category_id' ,'Category id :',['class'=>'btn-h1-spacing'])}}
+		{{ Form::select('category_id',$categories,null,['class'=>'form-control'])}}
 
-	{{Form::label('tags','Tags:',array('class'=>'form-spacing-top'))}}
-    {{ Form::select('tags[]',$tags,null,['class'=>'form-control select2-multi','multiple'=>'multiple'])}}
-      
+		{{Form::label('tags','Tags:',array('class'=>'form-spacing-top'))}}
+	    {{ Form::select('tags[]',$tags,null,['class'=>'form-control select2-multi','multiple'=>'multiple'])}}
+	      
 
-	{{ Form::label('body','Body :',['class'=>'btn-h1-spacing'])}}
-	{{ Form::textarea('body',null,["class" =>'form-control'])}}
+		{{ Form::label('body','Body :',['class'=>'btn-h1-spacing'])}}
+		{{ Form::textarea('body',null,["class" =>'form-control'])}}
 
 	</div>
 	

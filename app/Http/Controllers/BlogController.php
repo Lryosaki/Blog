@@ -26,6 +26,7 @@ class BlogController extends Controller
 		$tags=Tag::all();
 		$cats=Category::all();
 		return view('blog.blogdetails')->withPost($post)->withtags($tags)->withCategories($cats);
+		
 	}
 
 

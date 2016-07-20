@@ -27,8 +27,9 @@
     			@endforeach
     		</select>
 
-            {{Form::label('tags','Tags:',array('class'=>'form-spacing-top'))}}
+            {{Form::label('tags','Tags:',array('class'=>'form-spacing-top'))}}<small> (Hold ctrl to choose multiple tags)</small>  
             <select class="form-control select2-multi" name="tags[]" multiple="multiple">
+
                 @foreach($tags as $tag)
                 <option value='{{ $tag->id}}'>{{ $tag->name}}</option>
                 @endforeach
@@ -50,7 +51,7 @@
     {!! Html::script('js/select2.min.js') !!}
 
     <script type="text/javascript">
-        $(".select2-multi").select2();
+        $('.select2-multi').select2();
     </script>
 
 @endsection
