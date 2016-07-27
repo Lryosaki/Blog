@@ -29,23 +29,23 @@
                          <div class="col-md-6 col-sm-12 blog-padding-right">
                             <div class="single-blog two-column">
                                 <div class="post-thumb">
-                                    <a href="blogdetails.html"><img src="images/post.jpg" class="img-responsive" alt=""></a>
+                                    <a href="{{ url('blog/'.$post->slug)}}"><img src="images/post.jpg" class="img-responsive" alt=""></a>
                                     <div class="post-overlay">
                                          <span class="uppercase"><a href="#"> <small>{{ date('M j',strtotime($post->created_at)) }}</small></a></span> 
                                     </div>
                                 </div>
                                 <div class="post-content overflow">
                                     <h2 class="post-title bold"><a href="blogdetails.html">{{ $post->title }}</a></h2>
-                                    <h3 class="post-author"><a href="#">Posted by micron News</a></h3>
+                                    <h3 class="post-author"><a href="#">Posted by {{$post->posted_by}}x</a></h3>
                                        
-                                     <p> {{ substr($post->body,0,250) }} {{ strlen($post->body) > 250 ? "...": ""}}</p>
+                                     <p> {{ substr($post->body,0,150) }} {{ strlen($post->body) > 150 ? "...": ""}}</p>
 
-                                    <a href="{{ url('blog/'.$post->slug)}}" >Read More</a>
+                                    <a href="{{ url('blog/'.$post->slug)}}" class="hvr-underline-from-left" >Read More</a>
                                     <div class="post-bottom overflow">
                                         <ul class="nav nav-justified post-nav">
                                             <li><a href="#"><i class="fa fa-tag"></i>Creative</a></li>
                                             <li><a href="#"><i class="fa fa-heart"></i>32 Love</a></li>
-                                            <li><a href="#"><i class="fa fa-comments"></i>3 Comments</a></li>
+                                            <li><a href="#"><i class="fa fa-comments"></i>{{ $post->comments()->count()}} comments</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -69,33 +69,18 @@
                     <!--commentaires -->
                         <div class="sidebar-item  recent">
                             <h3>Comments</h3>
+                            
+                           
+                               @foreach($comments as $com)
                             <div class="media">
                                 <div class="pull-left">
-                                    <a href="#"><img src="images/portfolio/project1.jpg" alt=""></a>
+                                    <a href="/blog"><img src="{{"https://www.gravatar.com/avatar/" .md5(strtolower(trim($com->email))) ."?s=50&d=retro"}}" alt=""></a>
                                 </div>
                                 <div class="media-body">
-                                    <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
-                                    <p>posted on  07 March 2014</p>
+                                    <h4><a href="/blog">{{$com->comment}}</p>
                                 </div>
                             </div>
-                            <div class="media">
-                                <div class="pull-left">
-                                    <a href="#"><img src="images/portfolio/project2.jpg" alt=""></a>
-                                </div>
-                                <div class="media-body">
-                                    <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
-                                    <p>posted on  07 March 2014</p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="pull-left">
-                                    <a href="#"><img src="images/portfolio/project3.jpg" alt=""></a>
-                                </div>
-                                <div class="media-body">
-                                    <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
-                                    <p>posted on  07 March 2014</p>
-                                </div>
-                            </div>
+                           @endforeach
                         </div>
                     <!--commentaires -->
 

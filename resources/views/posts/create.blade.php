@@ -7,10 +7,23 @@
 
 @endsection
 @section('content')
+<section id="page-breadcrumb">
+        <div class="vertical-center sun">
+             <div class="container">
+                <div class="row">
+                    <div class="action">
+                        <div class="col-sm-12">
+                            <h1 class="title">Create new post</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section> 
 
 <div class="row">
 	<div class="col-md-8 col-md-offset-2  ">
-		<h1> Create New Post</h1>
 		<hr>
 		{!! Form::open(array('route' => 'posts.store','data-parsley-validate' => '')) !!}
     		{{Form::label('title','Title:')}}

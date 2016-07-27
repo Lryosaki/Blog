@@ -8,6 +8,21 @@
 @endsection
 @section('content')
 
+
+<section id="page-breadcrumb">
+        <div class="vertical-center sun">
+             <div class="container">
+                <div class="row">
+                    <div class="action">
+                        <div class="col-sm-12">
+                            <h1 class="title"></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section> 
 <div class="row">
 <div class="col-sm-10 col-sm-offset-2"> 
 {!! Form::model($post,['route' => ['posts.update',$post->id],'method'=>'PUT']) !!}

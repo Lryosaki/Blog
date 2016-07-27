@@ -27,6 +27,8 @@
 				{{Form::password('password',['class'=>'form-control'])}}
 				{{Form::label('password_confirmation','Confirm password')}}
 				{{Form::password('password_confirmation',['class'=>'form-control'])}}
+
+
 				{{Form::submit('Register',['class'=>'btn btn-primary hvr-grow btn-h1-spacing btn-bot-spacing'])}}
 
 		{!!Form::close()!!}

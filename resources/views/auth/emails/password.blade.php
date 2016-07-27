@@ -21,7 +21,7 @@
 							<table width="100%" cellpadding="0" cellspacing="0">
 								<tr>
 									<td class="content-block">
-										Please confirm your email address by clicking the link below.
+										Please confirm your email address by clicking the button below.
 									</td>
 								</tr>
 								<tr>
@@ -31,7 +31,7 @@
 								</tr>
 								<tr>
 									<td class="content-block" itemprop="handler" itemscope itemtype="http://schema.org/HttpActionHandler">
-										<a href="{{$link=url('password/reset',$token).'?email='.urlencode($user->getEmailForPasswordReset())}}" class="btn-primary" itemprop="url">Confirm email address</a>
+										<a href="{{$link=url('password/reset',$token).'?email='.urlencode($user->getEmailForPasswordReset())}}" class="btn-primary" >Confirm email address</a>
 									</td>
 								</tr>
 								<tr>

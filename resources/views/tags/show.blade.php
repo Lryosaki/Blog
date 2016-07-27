@@ -3,20 +3,36 @@
 @section('title',"| $tag->name ")
 
 @section('content')
+
+<section id="page-breadcrumb">
+        <div class="vertical-center sun">
+             <div class="container">
+                <div class="row">
+                    <div class="action">
+                        <div class="col-sm-12">
+                            <h1 class="title"></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section> 
 <div class="row">
 	<div class="col-md-6 col-md-offset-2 ">
 		<h1>{{ $tag->name }} Tag <small>{{ $tag->posts()->count() }} Posts</small></h1>
 	</div>
 	<div class="col-md-2 	">
+	@if(Auth::user()->name == 'Alaa Souiba')
 		<a href="{{ route('tags.edit', $tag->id)}}" class="btn btn-primary btn-block pull-right btn-h2-spacing hvr-grow">Edit</a>
 
 		{{ Form::open(['route' => ['tags.destroy', $tag->id], 'method' => 'DELETE']) }}
 				{{ Form::submit('Delete', ['class' => 'btn btn-danger btn-block btn-h1-spacing  hvr-grow']) }}
 		{{ Form::close() }}
-
+		@endif
 		
 
-	{{ Html::linkRoute('tags.index','<< See all tags',[],['class'=>'btn btn-default btn-block btn-h1-spacing hvr-grow'])}}
+	{{ Html::linkRoute('tags.index','<< See all tags',[],['class'=>'btn btn-default btn-block btn-h1-spacing hvr-float-shadow'])}}
 	</div>
 	
 	

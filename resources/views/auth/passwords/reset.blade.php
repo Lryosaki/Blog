@@ -24,7 +24,7 @@
 					Reset Password
 				</div>
 				<div class="panel-body">
-					{!!Form::open(['url'=>'password/reset','methid'=>'POST'])!!}
+					{!!Form::open(['url'=>'password/reset','method'=>'POST'])!!}
 						{{Form::hidden('token',$token)}}
 						{{Form::label('email','Email Address :')}}
 						{{Form::email('email',$email,['class'=>'form-control'])}}

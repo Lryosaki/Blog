@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Post;
 use App\Tag;
+use App\Comment;
 use App\Category;
 
 class BlogController extends Controller
@@ -17,7 +18,9 @@ class BlogController extends Controller
 		$posts= Post::paginate(4);
 		$tags=Tag::all();
 		$cats=Category::all();
-		return view('blog.blogone')->withPosts($posts)->withtags($tags)->withCategories($cats);
+				$coms= Comment::orderBy('created_at','desc')->limit(4)->get();
+
+		return view('blog.blogone')->withPosts($posts)->withtags($tags)->withCategories($cats)->withComments($coms);
 	}
 
 	public function getSingle($slug){
@@ -25,7 +28,8 @@ class BlogController extends Controller
 		$post=Post::where('slug','=',$slug)->first();
 		$tags=Tag::all();
 		$cats=Category::all();
-		return view('blog.blogdetails')->withPost($post)->withtags($tags)->withCategories($cats);
+						$coms= Comment::orderBy('created_at','desc')->limit(4)->get();
+		return view('blog.blogdetails')->withPost($post)->withtags($tags)->withCategories($cats)->withComments($coms);
 	}
 
 

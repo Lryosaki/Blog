@@ -27,7 +27,7 @@
 					{{session('status')}}		
 					</div>
 				@endif
-					{!!Form::open(['url'=>'password/email','methid'=>'POST'])!!}
+					{!!Form::open(['url'=>'password/email','method'=>'POST'])!!}
 						{{Form::label('email','Email Address :')}}
 						{{Form::email('email',null,['class'=>'form-control'])}}
 						{{Form::submit('Reset Password',['class'=>'btn btn-primary hvr-grow btn-top-spacing '])}}

@@ -8,6 +8,7 @@ use App\Post;
 use App\Tag;
 use Session;
 use App\Category;
+use Auth;
 class PostController extends Controller
 {
     public function __construct(){
@@ -59,6 +60,7 @@ class PostController extends Controller
         $post->slug  = $request->slug;
         $post->category_id = $request->category_id;
         $post->body  = $request->body;
+        $post->posted_by = Auth::user()->name;
         $post->save();
         $post->tags()->sync($request->tags,false);
         Session::flash('success','The blog post was successfully saved!');
