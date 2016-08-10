@@ -1,6 +1,6 @@
 @extends('main3')
 
-@section('title','|View Post')
+@section('title','| View Post')
 
 @section('content')
 
@@ -25,7 +25,7 @@
 	<h1 class='btn-spacing-top'> {{ $post->title }}</h1>
 	<hr>
 	{{Form::label('body','Post body:')}}
-	<p class="lead btn-spacing-top">{{ $post->body }}</p>
+	<p class="lead btn-spacing-top">{!! $post->body !!}</p>
 	<hr>
 		<div class="tags">
 		@foreach($post->tags as $tag)

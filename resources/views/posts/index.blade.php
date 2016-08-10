@@ -33,7 +33,8 @@
   					<th>#</th>
   					<th>Title</th>
   					<th>Body</th>
-  					<th>Created At</th>
+            <th>Created At</th>
+  					<th>Comments</th>
   					<th></th>
   				</thead>
   				<tbody>
@@ -42,8 +43,9 @@
   						<th>{{ $post->id }}</th>
   					
   					<td> {{ $post->title}}</td>
-  					<td> {{ substr($post->body,0,100)}}{{ strlen($post->body) >100 ? "...":""}}</td>
+  					<td> {{ substr(strip_tags($post->body),0,100)}}{{ strlen(strip_tags($post->body)) >100 ? "...":""}}</td>
   					<td> {{ date('M j, Y',strtotime($post->created_at))}}</td>
+            <td> <small>{{$post->comments()->count()}} total</small></td>
 
   					<td> <a href="{{ route('posts.show',$post->id)}}" class="btn btn-default btn-sm hvr-grow">View</a>
             @if(Auth::user()->name == $post->posted_by || Auth::user()->name == 'Alaa Souiba')

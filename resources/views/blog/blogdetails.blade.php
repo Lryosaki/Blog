@@ -36,7 +36,7 @@
 
                                     <h2 class="post-title bold"><a href="#">{{ $post->title }}</a></h2>
                                     <h3 class="post-author"><a href="#">Posted by {{$post->posted_by}}</a></h3>
-                                    <p>{{ $post->body }}  </p>
+                                    <p>{!! $post->body !!}  </p>
                                     <div class="tags">
                                         @foreach($post->tags as $tag)
                                             <spam class="label label-default">{{ $tag->name }}</spam>

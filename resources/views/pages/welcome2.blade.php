@@ -1,6 +1,6 @@
 @extends('main3')
 
-@section('title','| Homepage')
+@section('title',"| Homepage")
 
 @section('content')   
 
@@ -38,7 +38,7 @@
                                 <div class="post-content overflow">
                                     <h2 class="post-title bold"><a href="blogdetails.html">{{$post->title}}</a></h2>
                                     <h3 class="post-author"><a href="#">Posted by {{$post->posted_by}}</a></h3>
-                                     <p>{{ substr($post->body,0,800)}}{{ strlen($post->body) >800 ? "...":""}}</p>
+                                     <p>{{ substr(strip_tags($post->body),0,400)}}{{ strlen(strip_tags($post->body)) >400 ? "...":""}}</p>
                                     <a href="{{ url('blog/'.$post->slug)}}" class="btn btn-primary btn-h1-spacing hvr-float-shadow">Read More</a>
                                     <div class="post-bottom overflow">
                                         <ul class="nav navbar-nav post-nav">
@@ -53,11 +53,17 @@
                      @endforeach
                       
                     </div>
+                    
                  </div>
+
                 <div class="col-md-3 col-sm-5">
                     <div class="sidebar blog-sidebar">
 
                     <!--commentaires -->
+
+                        <div class="sidebar-item  ">
+                             <a href="{{ route('posts.create') }}" class="btn btn-default btn-block btn-h1-spacing hvr-float-shadow">Proposer un poste</a>
+                        </div>  
                         <div class="sidebar-item  recent">
                             <h3>Comments</h3>
 
@@ -73,6 +79,7 @@
                            @endforeach
     
                         </div>
+
                     <!--commentaires -->
 
                     <!--catégories -->
@@ -99,7 +106,7 @@
                         </div>
                     <!--tags --> 
 
-                    <!--photos -->
+                    <!--photos 
                         <div class="sidebar-item popular">
                             <h3>Latest Photos</h3>
                             <ul class="gallery">
@@ -111,7 +118,7 @@
                                 <li><a href="#"><img src="images/portfolio/popular1.jpg" alt=""></a></li>
                             </ul>
                         </div>
-                    <!--photos -->
+                    photos -->
 
                     </div>
                 </div>

@@ -2,7 +2,7 @@
 
 @extends('main3')
 
-@section('title','| About page')
+@section('title','| About us')
 
 @section('content')   
 

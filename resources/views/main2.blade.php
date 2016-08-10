@@ -13,5 +13,7 @@
       </div>
     </div>
       @include('newtemplate._footer')
+      @yield('scripts')
+
   </body>
 </html>

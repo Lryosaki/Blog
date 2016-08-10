@@ -1,11 +1,24 @@
 @extends('main3')
-@section('title','|Create New Posts')
- @section('stylesheets')
+@section('title','| Create New Posts')
+@section('stylesheets')
 
     {!! Html::style('css/parsley.css') !!}
     {!! Html::style('css/select2.min.css') !!}
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+
+    <script>
+
+        tinymce.init({ 
+            selector:'textarea',
+            plugins: "link image imagetools code print emoticons wordcount",
+            menubar : false
+        });
+    
+    </script>
+
 
 @endsection
+
 @section('content')
 <section id="page-breadcrumb">
         <div class="vertical-center sun">
@@ -49,7 +62,7 @@
 	
 
     		{{Form::label('body','Post body:',array('class'=>'form-spacing-top'))}}
-    		{{Form::textarea('body',null,array('class' => 'form-control ','required' => ''))}}
+    		{{Form::textarea('body',null,array('class' => 'form-control '))}}
     		{{Form::submit('Create Post',array('class' => 'btn btn-success btn-lg  hvr-grow','style' => 'margin-top :10px; margin-bottom:10px;'))}}
 		{!! Form::close() !!}
 	</div>

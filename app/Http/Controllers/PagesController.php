@@ -13,6 +13,7 @@ use GuzzleHttp\Client;
 class PagesController extends Controller{
 
 	public function getIndex(){
+		//$posts= Post::paginate(4);
 
 		$posts=Post::orderBy('created_at','desc')->limit(4)->get();
 		$tags=Tag::all();

@@ -31,14 +31,14 @@
                                 <div class="post-thumb">
                                     <a href="{{ url('blog/'.$post->slug)}}"><img src="images/post.jpg" class="img-responsive" alt=""></a>
                                     <div class="post-overlay">
-                                         <span class="uppercase"><a href="#"> <small>{{ date('M j',strtotime($post->created_at)) }}</small></a></span> 
+                                         <span class="uppercase"><a href="#"> <small>{{ date('M j',strtotime($post->created_at))}}</small></a></span> 
                                     </div>
                                 </div>
                                 <div class="post-content overflow">
                                     <h2 class="post-title bold"><a href="blogdetails.html">{{ $post->title }}</a></h2>
                                     <h3 class="post-author"><a href="#">Posted by {{$post->posted_by}}x</a></h3>
                                        
-                                     <p> {{ substr($post->body,0,150) }} {{ strlen($post->body) > 150 ? "...": ""}}</p>
+                                     <p> {{ substr(strip_tags($post->body),0,150) }} {{ strlen(strip_tags($post->body)) > 150 ? "...": ""}}</p>
 
                                     <a href="{{ url('blog/'.$post->slug)}}" class="hvr-underline-from-left" >Read More</a>
                                     <div class="post-bottom overflow">
@@ -66,6 +66,9 @@
                    <div class="col-md-3 col-sm-5">
                     <div class="sidebar blog-sidebar">
 
+                            <div class="sidebar-item  ">
+                             <a href="{{ route('posts.create') }}" class="btn btn-default btn-block btn-h1-spacing hvr-float-shadow">Proposer un poste</a>
+                        </div> 
                     <!--commentaires -->
                         <div class="sidebar-item  recent">
                             <h3>Comments</h3>
@@ -108,7 +111,7 @@
                         </div>
                     <!--tags --> 
 
-                    <!--photos -->
+                    <!--photos 
                         <div class="sidebar-item popular">
                             <h3>Latest Photos</h3>
                             <ul class="gallery">
@@ -120,7 +123,7 @@
                                 <li><a href="#"><img src="images/portfolio/popular1.jpg" alt=""></a></li>
                             </ul>
                         </div>
-                    <!--photos -->
+                    photos -->
 
                     </div>
                 </div>

@@ -31,7 +31,7 @@
                     <div class="contact-info bottom">
                         <h2>Contacts</h2>
                         <address>
-                        E-mail: <a href="mailto:someone@example.com">souibalaa@gmail.com</a> <br> 
+                        E-mail: <a href="mailto:souibalaa@gmail.com">souibalaa@gmail.com</a> <br> 
                         Phone: 06 66 10 31 66 <br> 
                         </address>
 

@@ -1,4 +1,3 @@
-<header id="header">      
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 overflow">
@@ -25,7 +24,7 @@
                     </button>
 
                     <a class="navbar-brand" href="/">
-                        <h1><img src="{{url('images/logo.png')}}" alt="logo"></h1>
+                        <h1><img src="{{url('images/ico/apple-touch-icon-57-precomposed.png')}}" alt="logo"></h1>
                     </a>
                     
                 </div>
@@ -71,3 +70,4 @@
                 </div>
             </div>
         </div>
+

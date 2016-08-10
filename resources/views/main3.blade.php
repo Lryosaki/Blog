@@ -15,6 +15,7 @@
     
       @include('template._footer')
       @include('template._javascripts')
+      @yield('scripts')
 
 
   </body>

@@ -47,7 +47,13 @@
 	Route::get('about', 'PagesController@getAbout');
 	Route::get('/', 'PagesController@getIndex');
 	Route::resource('posts','PostController');
-
 	
+	//PDF
+	
+	Route::get('pdf',function(){
+
+		$pdf = PDF::loadView('pdf');
+		return $pdf->download('post.pdf');
+	});
 
 
